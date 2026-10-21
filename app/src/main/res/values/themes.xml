@@ -1,5 +1,18 @@
 <resources>
-    <style name="Theme.Cosup" parent="android:Theme.Material.Light.NoActionBar">
+    <style name="Theme.Cosup" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cosup_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/cosup_green_pale</item>
+        <item name="colorOnPrimaryContainer">@color/cosup_ink</item>
+        <item name="colorSecondary">@color/cosup_green_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSurface">@color/cosup_surface</item>
+        <item name="colorOnSurface">@color/cosup_text</item>
+        <item name="colorSurfaceVariant">@color/cosup_surface_alt</item>
+        <item name="colorOnSurfaceVariant">@color/cosup_muted</item>
+        <item name="colorOutline">@color/cosup_border</item>
+        <item name="colorError">@color/cosup_red</item>
+        <item name="android:colorBackground">@color/cosup_bg</item>
         <item name="android:windowBackground">@color/cosup_bg</item>
     </style>
 </resources>

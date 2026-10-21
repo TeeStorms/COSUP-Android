@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Cosup.Card"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:layout_marginBottom="12dp">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="18dp">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="56dp" android:layout_height="56dp" android:background="@drawable/bg_tile">
+                <ImageView android:id="@+id/svcIcon"
+                    android:layout_width="match_parent" android:layout_height="match_parent"
+                    android:padding="6dp" android:scaleType="fitCenter" />
+            </FrameLayout>
+            <TextView android:id="@+id/svcName"
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:layout_marginStart="14dp" android:textAppearance="@style/Cosup.Title" />
+        </LinearLayout>
+        <TextView android:id="@+id/svcDesc"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:textAppearance="@style/Cosup.Body" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnFind"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="Find a site" android:visibility="gone" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

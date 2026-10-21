@@ -1,6 +1,7 @@
 package com.cosup.app
 
 import android.app.Application
+import androidx.appcompat.app.AppCompatDelegate
 import com.cosup.app.data.ApiClient
 import com.cosup.app.data.SessionInfo
 import com.cosup.app.data.SessionStore
@@ -23,9 +24,18 @@ class CosupApp : Application() {
     override fun onCreate() {
         super.onCreate()
         store = SessionStore(this)
-        // One quick local read so the very first API call already carries the saved token.
+        // One quick local read so the first API call carries the saved token and the saved theme is applied up front.
         initialSession = runBlocking { store.session.first() }
         tokenCache = initialSession?.token
+        AppCompatDelegate.setDefaultNightMode(nightModeFor(runBlocking { store.theme.first() }))
         client = ApiClient { tokenCache }
+    }
+
+    companion object {
+        fun nightModeFor(theme: String) = when (theme) {
+            "dark" -> AppCompatDelegate.MODE_NIGHT_YES
+            "light" -> AppCompatDelegate.MODE_NIGHT_NO
+            else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
+        }
     }
 }

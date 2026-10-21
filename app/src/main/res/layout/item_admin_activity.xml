@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Cosup.Card"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/acWho"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textAppearance="@style/Cosup.Body" android:textStyle="bold" />
+            <TextView android:id="@+id/acRole"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="8dp" android:background="@drawable/bg_badge"
+                android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="3dp" android:paddingBottom="3dp"
+                android:textAppearance="@style/Cosup.Badge" android:visibility="gone" />
+        </LinearLayout>
+        <TextView android:id="@+id/acAction"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/Cosup.Body" />
+        <TextView android:id="@+id/acDetail"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/Cosup.Body" android:textSize="12sp" android:visibility="gone" />
+        <TextView android:id="@+id/acMeta"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textAppearance="@style/Cosup.Muted" android:textSize="12sp" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

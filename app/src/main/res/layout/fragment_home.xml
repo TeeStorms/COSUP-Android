@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="380dp">
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="centerCrop" android:src="@drawable/banner"
+                android:contentDescription="COSUP community banner" />
+            <View android:layout_width="match_parent" android:layout_height="match_parent"
+                android:background="@drawable/scrim" />
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_gravity="bottom" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:background="@drawable/bg_chip_white" android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:paddingTop="5dp" android:paddingBottom="5dp"
+                    android:text="Community Oriented Substance Use Programme"
+                    android:textColor="@color/white" android:textSize="11sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:text="Support that meets you where you are."
+                    android:textColor="@color/white" android:textSize="30sp" android:textStyle="bold" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:layout_marginBottom="16dp"
+                    android:text="Free, confidential harm-reduction and treatment services across Pretoria and surrounding communities."
+                    android:textColor="#E6FFFFFF" />
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnReferral"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Self-referral" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnFindSite"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp" android:text="Find a site near you"
+                        android:textColor="@color/white" app:strokeColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="15dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include android:id="@+id/statSites" layout="@layout/view_stat"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_margin="5dp" />
+                <include android:id="@+id/statServices" layout="@layout/view_stat"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_margin="5dp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include android:id="@+id/statFree" layout="@layout/view_stat"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_margin="5dp" />
+                <include android:id="@+id/statHope" layout="@layout/view_stat"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_margin="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar android:id="@+id/loading"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_margin="40dp" android:indeterminate="true" />
+        <LinearLayout android:id="@+id/errorBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_horizontal" android:orientation="vertical"
+            android:padding="24dp" android:visibility="gone">
+            <TextView android:id="@+id/errorText"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:gravity="center" android:textColor="@color/cosup_red" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnRetry"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="Try again" />
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/contentBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:visibility="gone">
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" android:text="What we offer" android:textAppearance="@style/Cosup.Eyebrow" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" android:layout_marginBottom="12dp"
+                android:text="Our services" android:textAppearance="@style/Cosup.H2" />
+            <LinearLayout android:id="@+id/servicesContainer"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAllServices"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" android:text="See all services" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Find a site" android:textAppearance="@style/Cosup.Eyebrow" />
+                <TextView android:id="@+id/sitesTitle"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textAppearance="@style/Cosup.H2" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Search by suburb or service, see opening hours and call a site directly."
+                    android:textAppearance="@style/Cosup.Muted" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnMap"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" android:text="Open the map" />
+            </LinearLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Cosup.Card"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="20dp" android:layout_marginEnd="20dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="18dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="News highlights" android:textAppearance="@style/Cosup.Title" />
+                    <TextView android:id="@+id/newsEmpty"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" android:text="Check back soon for updates."
+                        android:textAppearance="@style/Cosup.Muted" android:visibility="gone" />
+                    <LinearLayout android:id="@+id/newsContainer"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp" android:orientation="vertical" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/btnAllNews"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp" android:text="All news" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <include android:id="@+id/hopeline" layout="@layout/view_hopeline"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnAbout"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" android:layout_marginTop="16dp" android:text="About COSUP" />
+
+        <include layout="@layout/view_partners"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

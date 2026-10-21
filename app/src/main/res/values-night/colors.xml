@@ -1,0 +1,10 @@
+<resources>
+    <color name="cosup_bg">#080F0B</color>
+    <color name="cosup_surface">#101C15</color>
+    <color name="cosup_surface_alt">#0B1610</color>
+    <color name="cosup_text">#EAF3ED</color>
+    <color name="cosup_muted">#93A79B</color>
+    <color name="cosup_border">#1F3427</color>
+    <color name="cosup_badge_text">#A6E3A8</color>
+    <color name="cosup_badge_bg">#12261A</color>
+</resources>

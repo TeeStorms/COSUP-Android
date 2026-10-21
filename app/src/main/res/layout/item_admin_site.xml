@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Cosup.Card"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:id="@+id/asMain"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/bg_badge" android:paddingStart="10dp" android:paddingEnd="10dp"
+            android:paddingTop="3dp" android:paddingBottom="3dp" android:text="Main centre"
+            android:textAppearance="@style/Cosup.Badge" android:visibility="gone" />
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilSName"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:hint="Site name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSName"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textCapWords"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilSAddress"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:hint="Address">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSAddress"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="textPostalAddress|textMultiLine"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilSHours"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:hint="Operating hours">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSHours"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilSPhone"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:hint="Phone">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSPhone"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="phone"  />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/asSave"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="Save" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

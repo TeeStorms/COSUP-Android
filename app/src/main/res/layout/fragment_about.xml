@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp"
+            android:paddingTop="16dp" android:paddingBottom="12dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Who we are" android:textAppearance="@style/Cosup.Eyebrow" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="About COSUP" android:textAppearance="@style/Cosup.H1" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingStart="20dp" android:paddingEnd="20dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Our story" android:textAppearance="@style/Cosup.H2" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="The Community Oriented Substance Use Programme (COSUP) has served Tshwane since 2015 across 16 sites. It is a partnership between the City of Tshwane and the University of Pretoria, providing rights-based harm reduction, treatment and reintegration support to people who use drugs."
+                android:textAppearance="@style/Cosup.Body" android:textSize="16sp" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Our approach is simple: meet people where they are, treat them with dignity, and connect them with the care and opportunities they need."
+                android:textAppearance="@style/Cosup.Body" android:textSize="16sp" />
+            <ImageView android:layout_width="match_parent" android:layout_height="220dp"
+                android:layout_marginTop="16dp" android:scaleType="centerCrop"
+                android:src="@drawable/about" android:contentDescription="COSUP community" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="Our values" android:textAppearance="@style/Cosup.H2" />
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Cosup.Card"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Dignity" android:textAppearance="@style/Cosup.Title" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:text="Every person is treated with respect and without judgement." android:textAppearance="@style/Cosup.Body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Cosup.Card"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Confidentiality" android:textAppearance="@style/Cosup.Title" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:text="Your information is protected and handled under POPIA." android:textAppearance="@style/Cosup.Body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.Cosup.Card"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Community" android:textAppearance="@style/Cosup.Title" />
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp" android:text="Care is built with and for the communities we serve." android:textAppearance="@style/Cosup.Body" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+        <include layout="@layout/view_partners"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,4 +1,18 @@
 <resources>
-    <color name="cosup_bg">#F7FAF8</color>
+    <color name="white">#FFFFFF</color>
     <color name="cosup_green">#3BA53E</color>
+    <color name="cosup_green_dark">#2D8A30</color>
+    <color name="cosup_green_pale">#E8F5EE</color>
+    <color name="cosup_ink">#0D1F15</color>
+    <color name="cosup_red">#E05A3A</color>
+    <color name="cosup_accent">#F0C93A</color>
+    <color name="cosup_bg">#F7FAF8</color>
+    <color name="cosup_surface">#FFFFFF</color>
+    <color name="cosup_surface_alt">#EEF6F1</color>
+    <color name="cosup_text">#0D1F15</color>
+    <color name="cosup_muted">#6B7C72</color>
+    <color name="cosup_border">#D0E8D8</color>
+    <color name="cosup_badge_text">#1F6B23</color>
+    <color name="cosup_badge_bg">#E8F5EE</color>
+    <color name="cosup_tile">#E8F5EE</color>
 </resources>

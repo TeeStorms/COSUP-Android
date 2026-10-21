@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:gravity="center_horizontal" android:orientation="vertical" android:padding="24dp">
+    <TextView
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Serving Tshwane since 2015 across 16 sites. A partnership between the City of Tshwane and the University of Pretoria."
+        android:textAppearance="@style/Cosup.Muted" android:textSize="12sp" />
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:orientation="horizontal">
+        <ImageView android:layout_width="64dp" android:layout_height="64dp"
+            android:layout_marginEnd="20dp" android:scaleType="fitCenter"
+            android:src="@drawable/city_of_tshwane" android:contentDescription="City of Tshwane" />
+        <ImageView android:layout_width="64dp" android:layout_height="64dp"
+            android:scaleType="fitCenter" android:src="@drawable/university_of_pretoria"
+            android:contentDescription="University of Pretoria" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:text="© COSUP · The 5 Watermelons"
+        android:textAppearance="@style/Cosup.Muted" android:textSize="11sp" />
+</LinearLayout>

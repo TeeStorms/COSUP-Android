@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Widget.Cosup.Card"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginStart="20dp" android:layout_marginEnd="20dp" android:layout_marginBottom="16dp">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <ImageView android:id="@+id/newsCover"
+            android:layout_width="match_parent" android:layout_height="180dp"
+            android:scaleType="centerCrop" android:visibility="gone" android:contentDescription="News cover image" />
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="18dp">
+            <TextView android:id="@+id/newsCategory"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge" android:paddingStart="10dp" android:paddingEnd="10dp"
+                android:paddingTop="3dp" android:paddingBottom="3dp"
+                android:textAppearance="@style/Cosup.Badge" android:visibility="gone" />
+            <TextView android:id="@+id/newsTitle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textAppearance="@style/Cosup.Title" />
+            <TextView android:id="@+id/newsMeta"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:textAppearance="@style/Cosup.Muted" android:textSize="12sp" />
+            <TextView android:id="@+id/newsBody"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textAppearance="@style/Cosup.Body" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnRead"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="Read the full article ↗" android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment" android:name="com.cosup.app.ui.home.HomeFragment" android:label="Home" />
+    <fragment android:id="@+id/servicesFragment" android:name="com.cosup.app.ui.services.ServicesFragment" android:label="Services" />
+    <fragment android:id="@+id/sitesFragment" android:name="com.cosup.app.ui.sites.SitesFragment" android:label="Find a Site" />
+    <fragment android:id="@+id/newsFragment" android:name="com.cosup.app.ui.news.NewsFragment" android:label="News" />
+    <fragment android:id="@+id/contactFragment" android:name="com.cosup.app.ui.contact.ContactFragment" android:label="Contact" />
+    <fragment android:id="@+id/aboutFragment" android:name="com.cosup.app.ui.about.AboutFragment" android:label="About COSUP" />
+    <fragment android:id="@+id/authFragment" android:name="com.cosup.app.ui.auth.AuthFragment" android:label="Sign in" />
+    <fragment android:id="@+id/profileFragment" android:name="com.cosup.app.ui.profile.ProfileFragment" android:label="My profile" />
+    <fragment android:id="@+id/adminFragment" android:name="com.cosup.app.ui.admin.AdminFragment" android:label="Admin" />
+</navigation>

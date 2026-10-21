@@ -1,18 +1,25 @@
-# Walkthrough - CI Build Fixes
+# Walkthrough - Jetpack Compose to XML + Fragments Migration
 
-Fixed compile-time resource resolution errors (`Unresolved reference 'R'` and missing drawable resources in CI) and package mismatches.
+Migrated the COSUP Android application from Jetpack Compose to traditional Android XML Views and Fragments.
 
 ## Changes
 
-### Tests & Package Alignment
-- Updated `ExampleInstrumentedTest.kt` and `ExampleUnitTest.kt` package from `com.example.cosup` to `com.cosup.app` to match application namespace and applicationId (`com.cosup.app`).
+### Build Configuration & Dependencies
+- Updated `app/build.gradle.kts` to enable ViewBinding (`viewBinding = true`) and added dependencies for AndroidX AppCompat, Material Components, ConstraintLayout, RecyclerView, Fragment KTX, and Navigation Component (`navigation-fragment-ktx`, `navigation-ui-ktx`). Removed Compose compiler and dependencies.
 
-### Resources & Drawables
-- Copied all core drawable assets (`about.jpg`, `banner.jpg`, `city_of_tshwane.jpg`, `hopeline.png`, `logo.png`, `university_of_pretoria.png`) from `res/drawable-nodpi/` to `res/drawable/` so AAPT2 correctly generates `R.drawable.*` references for Compose screens (`HomeScreen.kt`, `SimpleScreens.kt`).
+### Resources & Navigation
+- Added XML resources: colors, dark mode colors (`values-night/colors.xml`), themes, styles, strings, vector icons, shape drawables, menus (`bottom_nav.xml`, `top_menu.xml`), and the navigation graph (`nav_graph.xml`).
+- Added shared layouts (`view_badge`, `view_stat`, `view_hopeline`, `view_partners`, `item_service`, `item_news`, `item_news_highlight`, `item_site`, `item_referral_row`) and all screen/dialog/admin layouts.
+
+### Fragments & Helpers
+- Implemented Fragments for all screens (Home, Services, Sites, News, Contact, About, Auth, Profile, Admin) along with `MainActivity`, `CosupApp`, adapters (`SimpleListAdapter`), and ViewBinding extension/binder helpers (`Ext.kt`, `Binders.kt`, `SiteRow.kt`).
+
+### Cleanup
+- Removed all legacy Jetpack Compose UI files (`CosupRoot.kt`, themes, components, and screen composables).
 
 ## Verification Results
 
 ### Automated Tests
 - Ran `./gradlew clean assembleDebug testDebugUnitTest`:
   - **Status:** `BUILD SUCCESSFUL`
-  - **Unit Tests:** `1 passed, 0 skipped, 0 failed`
+  - **Unit Tests:** `15 passed, 0 skipped, 0 failed`
