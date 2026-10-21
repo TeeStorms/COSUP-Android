@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- DEBUG BUILDS ONLY: lets the app call your local website over plain http. Release builds are untouched. -->
+    <application android:networkSecurityConfig="@xml/network_security_config" />
+</manifest>
